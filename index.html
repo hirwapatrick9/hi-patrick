@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speech to Text Convertor</title>
+    <!--style link-->
+    <link rel="stylesheet" href="style.css">
+    <!-- Fontawesome CDN Link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" />
+    <!--favicon img-->
+    <link rel="shortcut icon" href="img/logo1.png" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.css">
+</head>
+<body>
+<div class="container">
+    <h1><img src="img/logo.png" alt="LOGO"></h1>
+    <div class="icons">
+        <i class="fas fa-moon"></i>
+        <i class="fas fa-sun"></i>
+    </div>
+    <select id="language">
+        <option value="rw-RW">Kinyarwanda</option>
+        <option value="en-US">English</option>
+        <option value="fr-FR">French</option>
+        <option value="es-ES">Spanish</option>
+        <option value="de-DE">German</option>
+        <option value="zh-CN">Chinese (Mandarin)</option>
+        <option value="ja-JP">Japanese</option>
+        <option value="ru-RU">Russian</option>
+        <option value="ar-SA">Arabic</option>
+        <option value="hi-IN">Hindi</option>
+        <option value="pt-BR">Portuguese</option>
+        <option value="it-IT">Italian</option>
+        <option value="ko-KR">Korean</option>
+        <option value="sw-KE">Swahili</option>
+        <option value="th-TH">Thai</option>
+        <option value="tr-TR">Turkish</option>
+        <option value="vi-VN">Vietnamese</option>
+        <option value="fa-IR">Persian</option>
+        <option value="pl-PL">Polish</option>
+    </select>
+    <br><br>
+    <input type="text" id="audio-name" placeholder="Enter audio name" />
+    <button id="start-btn">Start Recording</button>
+    <button id="stop-btn" disabled>Stop Recording</button>
+    <p>Read:</p>
+    <div id="result"></div>
+    <p>Reply:</p>
+    <div id="reply" contenteditable="true"></div>
+
+    <div id="recording-section">
+        <h3><img src="img/record.png" class="record-icon">Recorded Audios</h3>
+        <div id="audio-list"></div>
+    </div>
+    <p class="footer-paragraph">STC can make mistakes so be awared.<br>Iyi porogarame ishobora gukora amakosa hora uri menge.</p>
+    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/emojionearea/3.4.2/emojionearea.min.js"></script>
+    <script>
+            $('#reply').emojioneArea({
+                pickerPosition : 'top'
+            })
+    </script>
+</div>
+</body>
+</html>
